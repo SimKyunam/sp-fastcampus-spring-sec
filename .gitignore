@@ -1,0 +1,7 @@
+# Project exclude paths
+/.gradle/
+/comp/common-utils/build/
+/comp/common-utils/out/production/classes/
+/server/basic-test/build/
+/server/basic-test/out/production/classes/
+/server/basic-test/out/test/classes/
