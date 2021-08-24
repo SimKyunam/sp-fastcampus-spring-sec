@@ -10,22 +10,23 @@
 
 <div class="container center-contents">
     <div class="row">
-        <h1 class="title display-5"> 메인 페이지 </h1>
+        <h1 class="title display-5"> 학생 / 선생님 메인 페이지 </h1>
     </div>
 
     <div class="links">
-        <div class="link" sec:authorize="!isAuthenticated()">
+
+        <div class="link" sec:authorize="!authenticated">
             <a href="/login">  로그인 </a>
         </div>
-        <div class="link" sec:authorize="isAuthenticated()">
-            <a href="/user-page">  유저 페이지  </a>
+        <div class="link" sec:authorize="authenticated">
+            <a href="/student/main">  학생 페이지  </a>
         </div>
-        <div class="link" sec:authorize="isAuthenticated()">
-            <a href="/admin-page">  관리자 로그인 </a>
+        <div class="link" sec:authorize="authenticated">
+            <a href="/teacher/main">  선생님 페이지 </a>
         </div>
-        <div class="link" sec:authorize="isAuthenticated()">
+        <div class="link" sec:authorize="authenticated">
             <form th:action="@{/logout}" method="post">
-                <button class="btn btn-info" type="submit">로그 아웃</button>
+                <button type="submit">  로그아웃 </button>
             </form>
         </div>
     </div>
