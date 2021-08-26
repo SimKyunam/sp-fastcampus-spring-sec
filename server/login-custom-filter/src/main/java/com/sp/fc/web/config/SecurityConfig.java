@@ -35,15 +35,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .csrf().disable()
             .authorizeRequests(request->
-                    request.antMatchers("/", "login").permitAll()
+                    request.antMatchers("/", "/login").permitAll()
                     .anyRequest().authenticated()
             )
-//            .formLogin(
-//                    login -> login.loginPage("/login")
-//                    .permitAll()
-//                    .defaultSuccessUrl("/", false)
-//                    .failureUrl("/login-error")
-//            )
+            .formLogin(
+                    login -> login.loginPage("/login")
+                    .permitAll()
+                    .defaultSuccessUrl("/", false)
+                    .failureUrl("/login-error")
+            )
+             // failureUrl 등은 구현이 안되있음
+             // formLogin을 같이 사용함으로써, 커스텀한 부분은 커스텀 안한 부분은 formLogin 기능을 사용
             .addFilterAt(filter, UsernamePasswordAuthenticationFilter.class)
             .logout(logout -> logout.logoutSuccessUrl("/"))
             .exceptionHandling(e -> e.accessDeniedPage("/access-denied"))
