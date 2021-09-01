@@ -61,4 +61,13 @@ public class BasicAuthenticationTest {
         assertEquals("hello", resp);
     }
 
+    @DisplayName("4. POST 인증")
+    @Test
+    void test_4(){
+        //post방식은 csrf filter가 작동하기 때문에 작동 안됌 (csrf.disable 필요)
+        TestRestTemplate testClient = new TestRestTemplate("user1", "1111");
+        ResponseEntity<String> resp = testClient.postForEntity(greetingUrl(), "testName", String.class);
+
+        assertEquals("hello testName", resp.getBody());
+    }
 }

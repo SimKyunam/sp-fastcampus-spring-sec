@@ -8,6 +8,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.16/6dc192c7f93ec1853f70d59d8a6dcf94eb42866/lombok-1.18.16.jar" />
         </processorPath>
+        <module name="sp-fastcampus-spring-sec.server-login-multi-chain.main" />
         <module name="sp-fastcampus-spring-sec.server-basic-test.main" />
         <module name="sp-fastcampus-spring-sec.server-basic-authentication-test.main" />
         <module name="sp-fastcampus-spring-sec.server-login-basic.main" />
@@ -15,6 +16,7 @@
         <module name="sp-fastcampus-spring-sec.server-login-custom-filter.main" />
         <module name="sp-fastcampus-spring-sec.server-basic-authentication-test.test" />
         <module name="sp-fastcampus-spring-sec.server-login-basic.test" />
+        <module name="sp-fastcampus-spring-sec.server-login-multi-chain.test" />
         <module name="sp-fastcampus-spring-sec.server-login-custom-filter.test" />
         <module name="sp-fastcampus-spring-sec.server-basic-test.test" />
         <module name="sp-fastcampus-spring-sec.comp-common-utils.main" />
