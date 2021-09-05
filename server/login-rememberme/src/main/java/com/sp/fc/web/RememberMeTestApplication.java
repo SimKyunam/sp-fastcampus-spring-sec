@@ -9,10 +9,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         "com.sp.fc.config",
         "com.sp.fc.web"
 })
-public class UserDetailsTestApplication {
+public class RememberMeTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UserDetailsTestApplication.class, args);
+        SpringApplication.run(RememberMeTestApplication.class, args);
     }
 
 }
